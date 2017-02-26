@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from "react";
 
-export default class CalculatorButton extends React.Component {
+export default class CalculatorButton extends Component {
   static proptypes = {
     backgroundColor: PropTypes.string,
     callback: PropTypes.func,
@@ -9,7 +9,7 @@ export default class CalculatorButton extends React.Component {
   }
   static defaultProps = {
     backgroundColor: "#e0e0e0",
-    color: "black",
+    color: '#000',
     wide: false,
   }
 

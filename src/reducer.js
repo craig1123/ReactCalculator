@@ -12,11 +12,14 @@ export const Actions = {
   }),
 };
 
+const isFunction = (functionToCheck) => {
+	const getType = {};
+	return functionToCheck && getType.toString.call(functionToCheck) === '[object Function]';
+}
+
 //Action functions
 const updateState = (state, change) => {
-	if(isFunction(change)){
-    change = change(state);
-  }
+	if(isFunction(change)) change = change(state);
 	if (change.spliceIndex !== undefined){
     return state.updateIn(change.key, (listToSplice) => {
       if(change.value)
@@ -31,11 +34,6 @@ const updateState = (state, change) => {
     })
   }
 	return state.updateIn(change.key, (value) => change.value);
-}
-
-const isFunction = (functionToCheck) => {
-	var getType = {};
-	return functionToCheck && getType.toString.call(functionToCheck) === '[object Function]';
 }
 
 //store

@@ -51,10 +51,10 @@ body {
 	border: 1px solid #8e8e8e;
 	border-radius: 6px;
 	box-shadow: 10px 15px 34px -5px #595959;
-	height: 315px;
-	margin: 100px auto;
+	height: 375px;
+	margin: 25px auto;
 	overflow: hidden;
-	width: 228px;
+	width: 278px;
 }
 
 .calculator__buttons-wrapper {
@@ -79,8 +79,8 @@ body {
 	box-sizing: border-box;
 	font-size: 21px;
 	font-weight: 300;
-	height: 47px;
-	width: 57px;
+	height: 59px;
+	width: 69px;
 }
 
 .calculator-button:active {
