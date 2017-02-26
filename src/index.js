@@ -12,8 +12,8 @@ const store = createStore(reducer, window.devToolsExtension && window.devToolsEx
 ReactDOM.render(
   <Provider store={store}>
     <div>
-      <h2 style={{ textAlign: 'center' }}>
-        Please use Craig's Calculator
+      <h2 style={{ textAlign: 'center', color: '#999' }}>
+        Craig's Calculator
       </h2>
       <Calculator />
     </div>
