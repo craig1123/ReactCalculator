@@ -2,6 +2,7 @@
   "name": "React-Calculator",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://craig1123.github.io/ReactCalulator",
   "devDependencies": {
     "react-scripts": "0.9.0"
   },
