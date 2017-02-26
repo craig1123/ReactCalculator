@@ -1,7 +1,92 @@
-@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans');
+* {
+  font-family: "Helvetica Neue", sans-serif;
+}
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.display {
+	background-color: #999999;
+	box-sizing: border-box;
+	color: #ffffff;
+	font-size: 50px;
+	font-weight: lighter;
+	height: 80px;
+	padding: 20px 15px 5px 0;
+	position: relative;
+	text-align: right;
+	width: 100%;
+}
+
+.display__window-button-wrapper {
+	display: flex;
+	justify-content: space-between;
+	left: 4px;
+	position: absolute;
+	top: 3px;
+	width: 55px;
+}
+
+.display__window-button {
+	border-radius: 6px;
+	height: 12px;
+	width: 12px;
+}
+
+.display__window-button:nth-child(1) {
+	background-color: #fd615c;
+}
+
+.display__window-button:nth-child(2) {
+	background-color: #fdbb40;
+}
+
+.display__window-button:nth-child(3) {
+	background-color: #33c847;
+}
+
+.calculator {
+	border: 1px solid #8e8e8e;
+	border-radius: 6px;
+	box-shadow: 10px 15px 34px -5px #595959;
+	height: 315px;
+	margin: 100px auto;
+	overflow: hidden;
+	width: 228px;
+}
+
+.calculator__buttons-wrapper {
+	display: flex;
+}
+
+.calculator__left-buttons {
+	display: flex;
+	flex: 3;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+.calculator__operator-buttons {
+	flex: 1;
+}
+
+.calculator-button {
+	background-color: #e0e0e0;
+	border: none;
+	outline: 1px solid #8e8e8e;
+	box-sizing: border-box;
+	font-size: 21px;
+	font-weight: 300;
+	height: 47px;
+	width: 57px;
+}
+
+.calculator-button:active {
+	filter: brightness(80%);
+}
+
+.calculator-button--wide {
+	flex-grow: 1;
 }
