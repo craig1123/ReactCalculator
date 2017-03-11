@@ -7,7 +7,7 @@ import Display from "./Display";
 class Calculator extends AbstractSettingsComponent {
 
 	render() {
-		const { currentValue } = this.props;
+		const { currentValue, operator } = this.props;
 		const numberButtons = [ 7, 8, 9, 4, 5, 6, 1, 2, 3, 0 ].map((number) =>
 			<CalculatorButton
 				callback={() => this.enterNumber(number)}
@@ -18,9 +18,10 @@ class Calculator extends AbstractSettingsComponent {
 		);
     const calcButton = (cb, value, background, color) => (
       <CalculatorButton
+				key={value}
         callback={cb}
         value={value}
-        backgroundColor={background || ''}
+        backgroundColor={operator === value ? '#c3712b' : background || ''}
         color={color || ''}
       />
     );
@@ -38,10 +39,9 @@ class Calculator extends AbstractSettingsComponent {
             {calcButton(() => this.enterNumber("."), '.')}
 					</section>
 					<section className="calculator__operator-buttons">
-            {calcButton(this.setOperator.bind(this, 'divide'), '÷', operatorButtons, '#fff')}
-            {calcButton(this.setOperator.bind(this, 'multiply'), 'x', operatorButtons, '#fff')}
-            {calcButton(this.setOperator.bind(this, 'subtract'), '-', operatorButtons, '#fff')}
-            {calcButton(this.setOperator.bind(this, 'add'), '+', operatorButtons, '#fff')}
+						{['÷','x','-','+'].map(val =>
+							calcButton(this.setOperator.bind(this, val), val, operatorButtons, '#fff')
+						)}
             {calcButton(this.evaluate, '=', operatorButtons, '#fff')}
 					</section>
 				</div>

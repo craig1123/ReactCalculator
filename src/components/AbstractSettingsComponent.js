@@ -22,10 +22,10 @@ export default class AbstractSettingsComponent extends PureComponent {
 
   calculate = (operator, currentValue, previousValue) => {
     switch (operator) {
-      case 'add': return previousValue + currentValue;
-      case 'subtract': return previousValue - currentValue;
-      case 'multiply': return previousValue * currentValue;
-      case 'divide': return previousValue / currentValue
+      case '+': return previousValue + currentValue;
+      case '-': return previousValue - currentValue;
+      case 'x': return previousValue * currentValue;
+      case '÷': return previousValue / currentValue
       default: return currentValue;
     }
   }

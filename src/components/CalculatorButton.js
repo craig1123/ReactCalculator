@@ -14,12 +14,12 @@ export default class CalculatorButton extends Component {
   }
 
   render () {
-    const { backgroundColor, callback, color, value, wide } = this.props;
+    const { backgroundColor, callback, color, value, wide, style } = this.props;
     return (
       <button
         onClick={callback}
         className={`calculator-button${wide ? " calculator-button--wide" : ""}`}
-        style={{ backgroundColor, color }}
+        style={{ backgroundColor, color, ...style }}
       >
         {value}
       </button>

@@ -66,6 +66,7 @@ body {
 	flex: 3;
 	flex-wrap: wrap;
 	justify-content: flex-end;
+  border: solid 1px;
 }
 
 .calculator__operator-buttons {
@@ -75,7 +76,7 @@ body {
 .calculator-button {
 	background-color: #e0e0e0;
 	border: none;
-	outline: 1px solid #8e8e8e;
+	outline: 2px solid #8e8e8e;
 	box-sizing: border-box;
 	font-size: 21px;
 	font-weight: 300;
@@ -89,4 +90,8 @@ body {
 
 .calculator-button--wide {
 	flex-grow: 1;
+}
+
+.operator-selected {
+  border: solid 1px #000;
 }
